@@ -7,5 +7,5 @@ This is a collection of portage ebuild related to [syuppod](https://github.com/J
 To add this overlay run the following command:
 
 ```
-layman -o https://raw.githubusercontent.com/Jjeje007/Jjeje007-overlay/master/repositories.xml -L -a Jjeje007-overlay
+layman -o https://raw.githubusercontent.com/Jjeje007/Jjeje007-overlay/master/repositories.xml -a Jjeje007-overlay
 ```
