@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Retrieve from https://github.com/jorgicio/jorgicio-gentoo-overlay
 
-EAPI=6
+EAPI=7
 
 PYTHON_COMPAT=( python{2_7,3_{6,7,8}} )
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/LEW21/pydbus"
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="${HOMEPAGE}"
+	EGIT_REPO_URI="https://github.com/LEW21/${PN}.git"
 	SRC_URI=""
 	KEYWORDS=""
 else
@@ -25,11 +25,12 @@ LICENSE="LGPL-2+"
 SLOT="0"
 IUSE=""
 
-DEPEND="${PYTHON_DEPS}
-	dev-python/setuptools[${PYTHON_USEDEP}]
-"
+# DEPEND="${PYTHON_DEPS}
+# 	dev-python/setuptools[${PYTHON_USEDEP}]
+# "
 
 RDEPEND="${DEPEND}
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 "
- 
+
+DEPEND="${RDEPEND}"
