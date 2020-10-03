@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+# Copyright 2019-2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+command="${SYUPPOD_EXEC}"
+command_args="${SYUPPOD_OPTS}"
+
+pidfile="/var/run/${RC_SVCNAME}.pid"
+command_background=true
+
+# Logging options
+logdir="/var/log/syuppod/"
+stderr='error.log'
+stdout='stdout.log'
+
+start_stop_daemon_args="--user syuppod:syuppod -1 ${logdir}${stdout} -2 ${logdir}${stderr}"
+
+
+depend() {
+	# Need net to sync
+	need net
+	after logger
+}
