@@ -6,7 +6,7 @@ EAPI=7
 PYTHON_COMPAT=( python3_{6..9} )
 EGIT_REPO_URI="https://github.com/Jjeje007/${PN}.git"
 
-inherit distutils-r1 git-r3 user
+inherit distutils-r1 git-r3
 
 
 DESCRIPTION="Syuppod is a python3 daemon which automate sync and calculate how many packages to update
