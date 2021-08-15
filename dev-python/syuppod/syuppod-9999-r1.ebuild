@@ -9,7 +9,7 @@ PLOCALE_BACKUP="en"
 PYTHON_COMPAT=( python3_{6..9} )
 EGIT_REPO_URI="https://github.com/Jjeje007/${PN}.git"
 
-inherit distutils-r1 git-r3 l10n
+inherit distutils-r1 git-r3 plocale
 
 
 DESCRIPTION="Syuppod is a python3 daemon which automate sync and calculate how many packages to update
@@ -63,7 +63,7 @@ python_install_all() {
         doins "${S}"/syuppo/locale/"${1}"/LC_MESSAGES/syuppoc.mo
     }
     
-    l10n_for_each_locale_do install_locale    
+    plocale_for_each_locale install_locale    
 }
 
 
