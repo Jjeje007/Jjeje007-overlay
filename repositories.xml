@@ -9,6 +9,6 @@
       <email>jerome.venturi@gmail.com</email>
       <name><![CDATA[Jérôme Venturi]]></name>
     </owner>
-    <source type="git">git://github.com/Jjeje007/Jjeje007-overlay.git</source>
+    <source type="git">https://github.com/Jjeje007/Jjeje007-overlay.git</source>
   </repo>
 </repositories>
