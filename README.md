@@ -7,5 +7,14 @@ This is a collection of portage ebuild related to [syuppod](https://github.com/J
 To add this overlay run the following command:
 
 ```
-layman -o https://raw.githubusercontent.com/Jjeje007/Jjeje007-overlay/master/repositories.xml -a Jjeje007-overlay
+eselect repository add Jjeje007-overlay git https://github.com/Jjeje007/Jjeje007-overlay
 ```
+
+And to sync:
+
+```
+emaint sync -r Jjeje007-overlay
+```
+
+`Layman` is depreciated, more [information](https://wiki.gentoo.org/wiki/Eselect/Repository) about `eselect repository`
+
