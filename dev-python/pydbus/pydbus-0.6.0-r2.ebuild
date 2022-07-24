@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # Retrieve from https://github.com/jorgicio/jorgicio-gentoo-overlay
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3 )
+DISTUTILS_USE_PEP517=setuptools
+PYTHON_COMPAT=( python3_{8..10} )
 
 inherit distutils-r1
 
