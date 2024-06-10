@@ -1,11 +1,11 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 # Retrieve from https://github.com/jorgicio/jorgicio-gentoo-overlay
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{8..13} )
 
 inherit distutils-r1 pypi
 
