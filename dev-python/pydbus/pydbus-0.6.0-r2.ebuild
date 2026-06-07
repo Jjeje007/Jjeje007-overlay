@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # Retrieve from https://github.com/jorgicio/jorgicio-gentoo-overlay
 
-EAPI=8
+EAPI=9
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..13} )
+PYTHON_COMPAT=( python3_{8..14} )
 
 inherit distutils-r1 pypi
 
@@ -25,10 +25,6 @@ fi
 LICENSE="LGPL-2+"
 SLOT="0"
 IUSE=""
-
-# DEPEND="${PYTHON_DEPS}
-# 	dev-python/setuptools[${PYTHON_USEDEP}]
-# "
 
 RDEPEND="${DEPEND}
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
