@@ -17,7 +17,5 @@ start_stop_daemon_args="--user syuppod:syuppod -1 ${logdir}${stdout} -2 ${logdir
 
 
 depend() {
-	# Need net to sync
-	need net
 	after logger
 }
