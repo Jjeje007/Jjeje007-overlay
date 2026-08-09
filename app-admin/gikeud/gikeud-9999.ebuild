@@ -27,7 +27,7 @@ RDEPEND="
 	dev-python/gitpython[${PYTHON_USEDEP}]
 	dev-python/babel[${PYTHON_USEDEP}]
 	dev-python/inotify_simple[${PYTHON_USEDEP}]
-	dev-python/pydbus[${PYTHON_USEDEP}]
+	dev-python/dbus-fast[${PYTHON_USEDEP}]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-vcs/git
 "
