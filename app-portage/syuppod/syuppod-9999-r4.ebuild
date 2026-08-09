@@ -26,7 +26,7 @@ IUSE=""
 
 RDEPEND="
     >=sys-apps/portage-3.0.4[${PYTHON_USEDEP}]
-    >=dev-python/pydbus-0.6.0[${PYTHON_USEDEP}]
+    dev-python/dbus-fast[${PYTHON_USEDEP}]
     dev-python/numpy[${PYTHON_USEDEP}]
     dev-python/pexpect[${PYTHON_USEDEP}]
     >=dev-python/inotify_simple-1.3.3[${PYTHON_USEDEP}]
@@ -43,8 +43,12 @@ python_install_all() {
     newconfd "${FILESDIR}"/syuppod-conf.d syuppod
     newinitd "${FILESDIR}"/syuppod-init syuppod
     
+    # From the source tree rather than FILESDIR: the file also lives in
+    # config/ upstream, and having the same policy in two places means one
+    # of them eventually goes stale unnoticed. The translations are handled
+    # the same way, further down.
     insinto /usr/share/dbus-1/system.d
-    doins "${FILESDIR}"/syuppod-dbus.conf
+    doins "${S}"/config/syuppod-dbus.conf
     
     insinto /etc/sudoers.d
     newins "${FILESDIR}"/syuppod-sudoers syuppod
